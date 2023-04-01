@@ -20,6 +20,10 @@
 #los outputs?
 #Leer el input introducido de izquierda a derecha primero y luego de derecha a izquiera, si se lee lo mismo en ambas versiones, se define como palídromo.
 
-
+#Programa indica al usuario que puede introducir la frase. Se introduce la frase. Programa analiza la frase. Programa responde con la frase correcta.
 
 #Paso 3: Dividir y conquistar
+
+#Primeramente el programa debe dejar al usuario introducir el texto analizar.
+#Con este texto el programa debe ser capaz de analizarlo y decirdir si es un palíndromo.
+#El programa debe dar la respuesta adecuada al análisis realizado.
