@@ -7,6 +7,12 @@
 
 #Paso 2: Planear
 
-
+#¿Mi programa necesita una interfaz de usuario? ¿Cómo se va a
+#ver? ¿Qué funcionalidades tendrá la interfaz? 
+#¿Qué inputs recibirá mi programa? ¿De dónde provendrán estos
+#inputs?
+#¿Cuál es el resultado o output que queremos obtener?
+#Dados los inputs, ¿cuáles son los pasos necesarios para llegar a
+#los outputs?
 
 #Paso 3: Dividir y conquistar
