@@ -1,0 +1,1 @@
+Hola! Profe, algunos de los programas si se tiene activado pylint no corren por cuestiones de formato, en caso de que le aparezcan esos errores, pero yo los probé desactivandolo y en Replit y corren bien. Gracias.
