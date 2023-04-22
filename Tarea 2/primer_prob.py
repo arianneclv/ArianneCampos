@@ -1,5 +1,5 @@
 numero=int(input("Ingrese el numero: "))
-if numero < 0:
+if numero < 0: #Establecer error en caso de número negativos.
     print("Ingrese valores válidos.")
 else:
     factorial = 1
