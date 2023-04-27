@@ -5,14 +5,16 @@ def suma(): #Operación suma, debido a que necesita N números se utiliza listas
     numeros = [float(input(f"Ingrese el número {i+1}: ")) for i in range(n)] #Uso de listas debido a que debe permitir la suma de N números.
     resultado = sum(numeros)
     print("El resultado de la suma es:", resultado)
-    registrar_operacion("Suma", numeros, resultado) #Registra la operación con def registrar_operaciones
+    import registro
+    registro.registrar_operacion("Suma", numeros, resultado) #Registra la operación con def registrar_operaciones
 
 def resta():
     num1 = float(input("Ingrese el primer número: "))
     num2 = float(input("Ingrese el segundo número: "))
     resultado = num1 - num2
     print("El resultado de la resta es:", resultado)
-    registrar_operacion("Resta", [num1, num2], resultado)
+    import registro #Llama al módulo de registro.
+    registro.registrar_operacion("Resta", [num1, num2], resultado)
 
 def multiplicacion(): #Operación multiplicación, debido a que necesita N números se utiliza listas y se pregunta al usuario cuantos números quiere multiplicar.
     n = int(input("Ingrese la cantidad de números a multiplicar: "))
@@ -21,7 +23,8 @@ def multiplicacion(): #Operación multiplicación, debido a que necesita N núme
     for num in numeros:
         resultado *= num
     print("El resultado de la multiplicación es:", resultado)
-    registrar_operacion("Multiplicación", numeros, resultado) #Registra la operación con def registrar_operaciones
+    import registro
+    registro.registrar_operacion("Multiplicación", numeros, resultado) #Registra la operación con def registrar_operaciones
 
 def division():
     num1 = float(input("Ingrese el numerador: "))
@@ -32,17 +35,20 @@ def division():
     else:
         resultado = num1 / num2
         print("El resultado de la división es:", resultado)
-        registrar_operacion("División", [num1, num2], resultado) #Registra la operación con def registrar_operaciones
+        import registro
+        registro.registrar_operacion("División", [num1, num2], resultado) #Registra la operación con def registrar_operaciones
 
 def factorial():
     num = int(input("Ingrese un número: "))
     resultado = math.factorial(num)
     print("El factorial de", num, "es:", resultado)
-    registrar_operacion("Factorial", [num], resultado) #Registra la operación con def registrar_operaciones
+    import registro
+    registro.registrar_operacion("Factorial", [num], resultado) #Registra la operación con def registrar_operaciones
 
 def potencia():
     base = float(input("Ingrese la base: "))
     exponente = float(input("Ingrese el exponente: "))
     resultado = base ** exponente
     print("El resultado de la potencia es:", resultado)
-    registrar_operacion("Potencia", [base, exponente], resultado) #Registra la operación con def registrar_operaciones
+    import registro
+    registro.registrar_operacion("Potencia", [base, exponente], resultado) #Registra la operación con def registrar_operaciones
