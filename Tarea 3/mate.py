@@ -1,5 +1,6 @@
 import math #Primeramente realicé el código puesto que se me dificulta el uso de módulos por lo cual primero lo visualizo completamente.
 #Programa permite el ingreso de decimales.
+from registro import *
 def suma(): #Operación suma, debido a que necesita N números se utiliza listas y se pregunta al usuario cuantos números quiere sumar.
     n = int(input("Ingrese la cantidad de números a sumar: ")) #
     numeros = [float(input(f"Ingrese el número {i+1}: ")) for i in range(n)] #Uso de listas debido a que debe permitir la suma de N números.
@@ -31,7 +32,8 @@ def division():
     num2 = float(input("Ingrese el denominador: "))
     if num2 == 0: #Indicar al usuario que las divisiones entre cero son errores
         print("Error: No se puede dividir entre cero.")
-        registrar_operacion("División", [num1, num2], "Error: División entre cero") #Registra la operación con def registrar_operaciones
+        import registro
+        registro.registrar_operacion("División", [num1, num2], "Error: División entre cero") #Registra la operación con def registrar_operaciones
     else:
         resultado = num1 / num2
         print("El resultado de la división es:", resultado)
