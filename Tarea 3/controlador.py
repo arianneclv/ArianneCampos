@@ -1,5 +1,3 @@
-from mate import *
-
 def menu(): #Menú el cudal visualiza el usuario
     print("Tarea Calculadora")
     print("1. Suma")
