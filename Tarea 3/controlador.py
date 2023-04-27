@@ -1,10 +1,5 @@
 from mate import *
 
-def registrar_operacion(operacion, numeros, resultado): #Operación para registrar las operaciones realizadas
-    registro = operacion + ": " + " ".join(map(str, numeros)) + " = " + str(resultado)
-    with open("registro_operaciones.txt", "a") as archivo:
-        archivo.write(registro + "\n")
-
 def menu(): #Menú el cudal visualiza el usuario
     print("Tarea Calculadora")
     print("1. Suma")
