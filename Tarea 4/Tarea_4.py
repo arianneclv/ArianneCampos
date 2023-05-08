@@ -1,10 +1,10 @@
 def contar_caracteres(string):
-    letras = 0
+    letras = 0     
     numeros = 0
     especiales = 0
     
-    for caracter in string:
-        if caracter.isalpha():
+    for caracter in string:    #realiza la idetificación de cada caracter
+        if caracter.isalpha():   
             letras += 1
         elif caracter.isdigit():
             numeros += 1
@@ -21,30 +21,30 @@ contar_caracteres("queso65#@la")
 contar_caracteres("Fang2001^^h")
 contar_caracteres("Voldemort#$$k78")
 
-def contar_apariciones(string):
-    apariciones = {}
+def contar_aparicion(string):
+    aparicion = {} #se crea un diccionario 
     
-    for caracter in string:
-        if caracter in apariciones:
-            apariciones[caracter] += 1
+    for caracter in string: #identifica las apariciones de cada letra en el string
+        if caracter in aparicion:
+            aparicion[caracter] += 1
         else:
-            apariciones[caracter] = 1
+            aparicion[caracter] = 1
     
-    print(apariciones)
+    print(aparicion)
 
-contar_apariciones("papaya")
-contar_apariciones("timothee")
-contar_apariciones("zendaya")
-contar_apariciones("florence")
-contar_apariciones("fang")
+contar_aparicion("papaya")
+contar_aparicion("timothee")
+contar_aparicion("zendaya")
+contar_aparicion("florence")
+contar_aparicion("fang")
 
-def eliminar_elemento(lista, elemento):
+def eliminar_elemento(lista, elemento): #Se crea comando de eliminar
     lista_sin_elemento = [valor for valor in lista if valor != elemento]
-    return lista_sin_elemento
+    return lista_sin_elemento #Da la lista con el elemento ya eliminado
 
-lista1 = [20, 30, 40, 20, 5, 100, 5, 20]
-elemento1 = 20
-resultado1 = eliminar_elemento(lista1, elemento1)
+lista1 = [20, 30, 40, 20, 5, 100, 5, 20] #Lista creada
+elemento1 = 20 #Elemento a eliminar
+resultado1 = eliminar_elemento(lista1, elemento1) #Comando de eliminar
 print(resultado1) 
 
 lista2 = ["perro", "gato", "sombrero", "gato", "zanahoria"]
@@ -62,8 +62,28 @@ elemento2 = "banano"
 resultado2 = eliminar_elemento(lista2, elemento2)
 print(resultado2) 
 
+lista1 = ["Harry", "Niall", "Louis", "Zayn", "Liam"]
+elemento1 = "Zayn"
+resultado1 = eliminar_elemento(lista1, elemento1)
+print(resultado1) 
+
+lista2 = ["Costa Rica", "Nicaragua", "Panama", "Guatemala", "Rusia"]
+elemento2 = "Rusia"
+resultado2 = eliminar_elemento(lista2, elemento2)
+print(resultado2) 
+
+lista1 = ["Fang", "Urian", "Luna", "Lolo"]
+elemento1 = "Lolo"
+resultado1 = eliminar_elemento(lista1, elemento1)
+print(resultado1) 
+
+lista2 = ["Dipper", "Mabel", "Tala", "Stan"]
+elemento2 = "Tala"
+resultado2 = eliminar_elemento(lista2, elemento2)
+print(resultado2) 
+
 def convertir_secuencia(input_usuario):
-    valores = input_usuario.split(",")
+    valores = input_usuario.split(",") #Indica que debe ser separado por una coma.
     lista = [int(valor) for valor in valores]
     tupla = tuple(lista)
     print("Lista:", lista)
