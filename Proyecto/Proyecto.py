@@ -2,41 +2,41 @@ import random
 
 
 class Carta:
-    def __init__(self, palo, valor):
+    def __init__(self, palo, valor): #establecer clase carta
         self.palo = palo
         self.valor = valor
 
-    def __str__(self):
-        return f"{self.valor} de {self.palo}"
+    def __str__(self):  
+        return f"{self.valor} de {self.palo}" #devolver valor
 
 
-class Baraja:
-    palos = ["♠", "♦", "♥", "♣"]
-    valores = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+class Baraja:    #establecer clase baraja
+    palos = ["♠", "♦", "♥", "♣"]    #sīmbolos de cartas
+    valores = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"] #valores de las cartas
 
     def __init__(self):
         self.cartas = []
         self.crear_baraja()
 
-    def crear_baraja(self):
+    def crear_baraja(self):   #acción de crear la baraja para el usuario
         for palo in self.palos:
             for valor in self.valores:
                 carta = Carta(palo, valor)
                 self.cartas.append(carta)
 
-    def mezclar(self):
-        random.shuffle(self.cartas)
+    def mezclar(self):    #mezclar la baraja
+        random.shuffle(self.cartas)   #random permite esta acción aleactoriamente
 
-    def sacar_carta(self):
-        return self.cartas.pop()
+    def sacar_carta(self):    
+        return self.cartas.pop()  #devolcer una carta especifica para el juego
 
 
-class Mano:
+class Mano:       #establecer la mano del jugador por medio de diferentes acciones
     def __init__(self):
         self.cartas = []
 
     def agregar_carta(self, carta):
-        self.cartas.append(carta)
+        self.cartas.append(carta)   #se utiliza append para agregar una sola cosa a la lista
 
     def obtener_valor(self):
         valor = 0
@@ -68,22 +68,22 @@ class Jugador:
         self.nombre = nombre
         self.mano = Mano()
 
-    def agregar_carta_a_mano(self, carta):
+    def agregar_carta_a_mano(self, carta):   #agregar una carta a la mano del jugador
         self.mano.agregar_carta(carta)
 
     def __str__(self):
         return f"Mano de {self.nombre}: {self.mano}"
 
 
-class JuegoBlackjack:
-    def __init__(self):
-        self.baraja = Baraja()
+class JuegoBlackjack:  #clase que permite el inicio del juego, se establecen todas las situaciones a pasar en el juego
+    def __init__(self):   #se ut
+        self.baraja= Baraja()
         self.baraja.mezclar()
         self.jugador = Jugador("Jugador")
         self.casa = Jugador("Casa")
         self.terminado = False
 
-    def repartir_cartas_iniciales(self):
+    def repartir_cartas_iniciales(self): 
         for _ in range(2):
             self.jugador.agregar_carta_a_mano(self.baraja.sacar_carta())
             self.casa.agregar_carta_a_mano(self.baraja.sacar_carta())
