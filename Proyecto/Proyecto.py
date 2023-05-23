@@ -128,7 +128,7 @@ class JuegoBlackjack:  #clase que permite el inicio del juego, se establecen tod
         print(self.jugador)
         print(f"Valor de la Mano del Jugador: {valor_jugador}")
 
-        if valor_jugador > 21:
+        if valor_jugador > 21:   #establecer lo que vaya a pasar dependiendo de la situación y valores obtenidos
             print("Te has pasado de 21. ¡Has perdido!")
         elif valor_casa > 21:
             print("La Casa se ha pasado de 21. ¡Has ganado!")
